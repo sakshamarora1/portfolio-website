@@ -43,7 +43,7 @@ theme = "LoveIt"
     # LoveIt NEW | 0.2.0 Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = ""
+      logo = "https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png"
       # title name
       name = "Saksham Arora"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -51,7 +51,7 @@ theme = "LoveIt"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # LoveIt NEW | 0.2.5 whether to use typeit animation for title name
-      typeit = true
+      typeit = false
 
   # Footer config
   [params.footer]
@@ -103,13 +103,16 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Saksham Arora"
       # subtitle shown in home page
-      subtitle = "Engineering Sophomore at Maharaja Agrasen Institute of Technology"
+      subtitle = """
+      Hi! I'm an Engineering Sophomore student currently pursuing Bachelor of Technology 
+      in Information Tehnology at Maharaja Agrasen Institute of Technology, Delhi, India. 
+      """
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
       social = true
       # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
-      disclaimer = "Delhi, India"
+      disclaimer = ""
     # Home page posts
     [params.home.about]
       enable = true
@@ -219,27 +222,6 @@ theme = "LoveIt"
         repo = ""
         clientId = ""
         clientSecret = ""
-      # Valine comment config
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # LoveIt NEW | 0.2.6 emoji data file name, default is "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # located in "themes/LoveIt/assets/data/emoji/" directory
-        # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
-        emoji = ""
       # Facebook comment config
       [params.page.comment.facebook]
         enable = false
@@ -257,60 +239,17 @@ theme = "LoveIt"
         colorful = true
         dislikes = false
         outlined = false
-      # LoveIt NEW | 0.2.0 Commento comment config
-      [params.page.comment.commento]
-        enable = false
-      # LoveIt NEW | 0.2.5 Utterances comment config
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-    # LoveIt NEW | 0.2.7 Third-party library config
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = "some.css"
-        # located in "assets/"
-        # Or
-        # someCSS = "https://cdn.example.com/some.css"
-      [params.page.library.js]
-        # someJavascript = "some.js"
-        # located in "assets/"
-        # Or
-        # someJavascript = "https://cdn.example.com/some.js"
-    # LoveIt NEW | 0.2.0 SEO config
-    [params.page.seo]
-      # Publisher info
-      [params.page.seo.publisher]
-        name = "Saksham Arora"
-        [params.page.seo.publisher.logo]
-          url = "logo.png"
-          width = 127
-          height = 40
-      # Logo info
-      [params.page.seo.logo]
-        url = "logo.png"
-        width = 127
-        height = 40
-      # Image info
-      [params.page.seo.image]
-        url = "cover.png"
-        width = 800
-        height = 600
 
   # LoveIt NEW | 0.2.5 TypeIt config
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
-    speed = 80
+    speed = 45
     # blinking speed of the cursor (measured in milliseconds)
     cursorSpeed = 1000
     # character used for the cursor (HTML format is supported)
     cursorChar = " |"
     # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    duration = 10000
+    duration = 5000
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]
@@ -385,7 +324,7 @@ theme = "LoveIt"
 [author]
   name = "Saksham Arora"
   email = "sakshamarora1001@gmail.com"
-  link = ""
+  link = "https://linkedin.com/in/sakshamarora1"
 
 # Sitemap config
 [sitemap]
@@ -395,8 +334,7 @@ theme = "LoveIt"
 
 # Permalinks config
 [Permalinks]
-  # posts = ":year/:month/:filename"
-  blogs = ":filename"
+  posts = ":year/:month/:filename"
 
 # Privacy config
 [privacy]
@@ -430,19 +368,19 @@ theme = "LoveIt"
 
 [menu]
   [[menu.main]]
-    identifier = "profile resume"
-    pre = "|"
-    post = "|"
+    identifier = "profile"
+    pre = ""
+    post = ""
     name = "Profile"
     url = "/profile/"
     title = "Resume"
     weight = 4
   [[menu.main]]
-    identifier = "blogs"
+    identifier = "posts"
     # you can add extra information before the name (HTML format is supported), such as icons
-    pre = "|"
+    pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
-    post = "|"
+    post = ""
     name = "Blogs"
     url = "/blogs/"
     # title will be shown when you hover on this menu link
@@ -450,16 +388,16 @@ theme = "LoveIt"
     weight = 3
   [[menu.main]]
     identifier = "about"
-    pre = "|"
-    post = "|"
+    pre = ""
+    post = ""
     name = "About"
     url = "/about"
     title = "About"
     weight = 2
   [[menu.main]]
     identifier = "home"
-    pre = "|"
-    post = "|"
+    pre = ""
+    post = ""
     name = "Home"
     url = "/"
     title = "Home"
