@@ -65,7 +65,7 @@ theme = "LoveIt"
     # LoveIt NEW | 0.2.0 whether to show the author
     author = true
     # Site creation time
-    since = "14 May"
+    since = "May 2020"
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
@@ -103,7 +103,7 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Saksham Arora"
       # subtitle shown in home page
-      subtitle = "Engineering Sophomore pursuing B.Tech in Information Technology" 
+      subtitle = "Engineering Junior pursuing B.Tech in Information Technology" 
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -200,7 +200,6 @@ theme = "LoveIt"
       Pinterest = true
       HackerNews = true
       Reddit = true
-      Myspace = true
       Blogger = true
       Instagram = true
     # LoveIt CHANGED | 0.2.0 Comment config
@@ -372,7 +371,7 @@ theme = "LoveIt"
     name = "Resume"
     url = "/resume.pdf"
     title = "Resume"
-    weight = 3
+    weight = 4
   [[menu.main]]
     identifier = "posts"
     # you can add extra information before the name (HTML format is supported), such as icons
@@ -383,15 +382,15 @@ theme = "LoveIt"
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = "Blogs"
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about"
+    title = "About"
     weight = 2
-  # [[menu.main]]
-  #   identifier = "about"
-  #   pre = ""
-  #   post = ""
-  #   name = "About"
-  #   url = "/about"
-  #   title = "About"
-  #   weight = 2
   [[menu.main]]
     identifier = "home"
     pre = ""
@@ -400,4 +399,3 @@ theme = "LoveIt"
     url = "/"
     title = "Home"
     weight = 1
-    
