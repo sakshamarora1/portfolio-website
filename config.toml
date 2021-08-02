@@ -369,7 +369,7 @@ theme = "LoveIt"
     pre = ""
     post = ""
     name = "Resume"
-    url = "/SakshamArora_Resume.pdf"
+    url = "/sakshamarora_resume.pdf"
     title = "Resume"
     weight = 4
   [[menu.main]]
