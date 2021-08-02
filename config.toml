@@ -103,7 +103,7 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Saksham Arora"
       # subtitle shown in home page
-      subtitle = "Engineering Junior pursuing B.Tech in Information Technology" 
+      subtitle = "Engineering Senior pursuing B.Tech in Information Technology" 
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -369,7 +369,7 @@ theme = "LoveIt"
     pre = ""
     post = ""
     name = "Resume"
-    url = "/resume.pdf"
+    url = "/SakshamArora_Resume.pdf"
     title = "Resume"
     weight = 4
   [[menu.main]]
