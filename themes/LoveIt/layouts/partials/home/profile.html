@@ -27,16 +27,22 @@
         </h1>
     {{- end -}}
 
-    {{- with $profile.subtitle -}}
-        <h2 class="home-subtitle">
+    {{- with $profile.subtitleFixed -}}
+        <pre class="home-subtitle">
+            {{- . | safeHTML -}}
+        </pre>
+    {{- end -}}
+
+    {{- with $profile.subtitleTypeIt -}}
+        <pre class="home-subtitle" style="white-space: pre-line;">
             {{- if $profile.typeit -}}
                 {{- $id := dict "content" . "scratch" $.Scratch | partial "function/id.html" -}}
                 <div id="{{ $id }}" class="typeit"></div>
-                {{- dict $id (slice $id) | dict "typeitMap" | merge ($.Scratch.Get "this") | $.Scratch.Set "this" -}}
+                {{- dict $id (slice $id) | dict "typeitMap" | merge ($.Scratch.Get "this") | $.Scratch.Set "this" | safeHTML -}}
             {{- else -}}
-                {{- . -}}
+                {{- . | safeHTML -}}
             {{- end -}}
-        </h2>
+        </pre>
     {{- end -}}
 
     {{- if $profile.social -}}
@@ -66,6 +72,7 @@
 
     {{- with $profile.disclaimer -}}
         <h3 class="home-disclaimer">
+            <i class="fas fa-map-marker-alt"></i> &nbsp;
             {{- . | safeHTML -}}
         </h3>
     {{- end -}}
