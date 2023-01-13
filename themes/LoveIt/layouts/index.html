@@ -18,7 +18,7 @@
             </div>
         {{- end -}}
 
-        {{- /* Posts */ -}}
+        <!-- {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
             {{- /* Paginate */ -}}
             {{- $pages := where .Site.RegularPages "Type" "posts" -}}
@@ -36,6 +36,45 @@
                 {{- .Render "summary" -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}
-        {{- end -}}
+        {{- end -}} -->
+
+        <!-- <h1 align="center"> My Projects </h1> -->
+        <br/>
+
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/builtree/assets/simulate/documentation/SimulateTitle.svg" />
+
+        <!-- TODO: Add languages buttons -->
+        {{ $twitterCards := slice
+            (dict
+                "title" "Handwrite Web"
+                "description" "A cool tool that allows anyone to convert their own handwriting into custom fonts and use in text editors! Just provide a handwriting sample, and the tool generates a personalized font based on the input handwriting style."
+                "image" "https://raw.githubusercontent.com/builtree/assets/handwrite/handwrite.gif"
+                "link" "https://www.builtree.org/handwrite-web/"
+            )
+            (dict
+                "title" "Simulate"
+                "description" "A collection of informative and beautiful simulations based on mathematical concepts, physics and algorithms with support for Android, iOS, and Web built using Flutter and Dart!"
+                "image" "https://raw.githubusercontent.com/builtree/assets/simulate/documentation/SimulateTitle.svg"
+                "link" "https://www.builtree.org/simulate/"
+            )
+            (dict
+                "title" "Handwrite CLI"
+                "description" "Initially developed Handwrite project as a CLI application, Handwrite CLI is a Python package we published on PyPi that generates fonts from user's handwriting input image! Bye bye handwritten assignments :D"
+                "image" "https://raw.githubusercontent.com/builtree/assets/handwrite/logo_white_background.svg"
+                "link" "https://www.builtree.org/handwrite/usage/"
+            )
+        }}
+            <!-- Add buttons for languages -->
+        {{ range $index, $card := $twitterCards }}
+        <a href="{{ $card.link }}">
+        <!-- TODO: Add bouncy animation -->
+        <div class="content" align="center" style="border-radius:15px; padding: 20px; background-color:rgba(0, 0, 0, 0.2); opacity: 0.9; transition: box-shadow 0.3s ease, opacity 0.3s ease; box-shadow: none;" onmouseover="this.style.opacity = '1'; this.style.boxShadow = '0 0 10px 2px rgba(0, 0, 0, 0.5)';" onmouseout="this.style.opacity = '0.9'; this.style.boxShadow = 'none';">
+            <h2>{{ $card.title }}</h2>
+            <img src="{{ $card.image }}" alt="{{ $card.title }}" width="60%">
+            <p>{{ $card.description }}</p>
+    </div>
+        </a>
+        <br/>
+        {{ end }}
     </div>
 {{- end -}}
